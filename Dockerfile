@@ -14,6 +14,4 @@ RUN export NVM_DIR="$HOME/.nvm" && \
     nvm alias default $NODE_VERSION && \
     nvm use default
 
-ENV NVM_DIR=$NVM_DIR
-
 RUN rm -rf /var/lib/apt/lists/*
