@@ -5,7 +5,7 @@ LABEL description="Ubuntu with Python 3, Node.js, and some preinstalled packages
 WORKDIR /app
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python-is-python3 python3-pip curl git libglib2.0-0 libnss3 libnspr4 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libatspi2.0-0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libdrm2 libxkbcommon0 libpango-1.0-0 libcairo2 liboss4-salsa-asound2
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python-is-python3 python3-pip curl git libglib2.0-0 libnss3 libnspr4 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libatspi2.0-0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libdrm2 libxkbcommon0 libpango-1.0-0 libcairo2 liboss4-salsa-asound2 libimage-exiftool-perl
 
 COPY requirements.txt requirements.txt
 RUN pip install --break-system-packages -r requirements.txt
