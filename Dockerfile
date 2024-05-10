@@ -11,7 +11,7 @@ ENV NODE_VERSION v16
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.39.7/install.sh | bash
 
 COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install --break-system-packages -r requirements.txt
 
 COPY package.json /app
 COPY package-lock.json /app
