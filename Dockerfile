@@ -8,7 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python-is-python3 python3-pip curl git libimage-exiftool-perl
 
 ENV NODE_VERSION v16
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.39.5/install.sh | bash
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.39.7/install.sh | bash
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
